@@ -1,0 +1,24 @@
+name: Docker Image CI Pipeline
+ 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+ 
+jobs:
+ 
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      env:
+        USER: ${{ secrets.USER }}
+        PASS: ${{ secrets.PASS }}   
+      run: |        
+        docker build . --file Dockerfile --tag akashigt/docker-ci-demo-2025:v1
+        echo $PASS | docker login -u $USER --password-stdin       
+        docker push akashigt/docker-ci-demo-2025:v1
