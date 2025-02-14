@@ -1,13 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CI/CD DEMO APP devops </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 50px 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #services {
+            padding: 50px 20px;
+            background: #fff;
+        }
+        .service {
+            margin: 20px 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <h2>CI/CD APP devops test  </h2>
-  <p>Button:</p>
-  <button>Happy Learning tekton ci feb 2025  </button>
+    <header>
+        <h1>Welcome to Our Website</h1>
+        <p>Your success starts here</p>
+        <a href="#services" class="btn">Explore More</a>
+    </header>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Web Development</h3>
+            <p>We build modern and responsive websites.</p>
+        </div>
+        <div class="service">
+            <h3>SEO Optimization</h3>
+            <p>Boost your site's ranking with our SEO strategies.</p>
+        </div>
+        <div class="service">
+            <h3>Marketing</h3>
+            <p>Grow your business with our marketing solutions.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Our Website | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.querySelector('.btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#services').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
